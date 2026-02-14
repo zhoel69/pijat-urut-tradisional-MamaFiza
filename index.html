@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <title>MamaFiza - Pijat Urut Tradisional Khusus Wanita</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- OG Meta -->
+  <meta property="og:title" content="MamaFiza - Pijat Urut Tradisional Khusus Wanita Area Tangerang" />
+  <meta property="og:description" content="Pijat urut tradisional khusus wanita oleh terapis wanita. Aman, nyaman, dan syar’i. Layanan panggilan ke rumah. Reservasi via WhatsApp sekarang!" />
+  <meta property="og:image" content="https://mamafiza.netlify.app/images/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mamafiza.netlify.app" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MamaFiza - Pijat Urut Tradisional Khusus Wanita Area Tangerang" />
+  <meta name="twitter:description" content="Pijat urut tradisional khusus wanita oleh terapis wanita. Aman, nyaman, dan syar’i. Layanan panggilan ke rumah. Reservasi via WhatsApp sekarang!" />
+  <meta name="twitter:image" content="https://mamafiza.netlify.app/images/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="images/favicon.png">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --primary: #d88ca4;
+      --accent: #ffe6f0;
+      --bg: #fff0f5;
+      --dark: #442222;
+      --wa-green: #25D366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+#hero-img {
+  position: fixed;       /* supaya gambar tetap di layar saat scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;         /* menutupi seluruh viewport */
+  object-fit: cover;     /* supaya gambar tidak terdistorsi */
+  z-index: 0;            /* konten muncul di atas gambar */
+  transition: opacity 1s ease-in-out;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+   main {
+  position: relative;
+  z-index: 1;           
+  max-width: 900px;
+  margin: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+main section:first-child {
+  margin-top: 100vh;    /* konten pertama mulai di bawah hero image */
+}
+
+    section {
+      margin-bottom: 2em;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 0.5em;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    .contact {
+      background: var(--accent);
+      padding: 1em;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      font-size: 0.9em;
+    }
+
+    /* Tombol WA */
+    .wa-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .wa-float,
+    .wa-share {
+      width: 55px;
+      height: 55px;
+      font-size: 26px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .wa-float {
+      background-color: var(--wa-green);
+      animation: pulse 2.5s infinite ease-in-out;
+    }
+
+    .wa-float:hover,
+    .wa-share:hover {
+      transform: scale(1.1);
+    }
+
+    .wa-share {
+      background-color: var(--wa-green);
+    }
+
+    @keyframes pulse {
+      0%   { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,128,0,0.3); }
+      70%  { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(0,128,0,0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,128,0,0); }
+    }
+
+    @media (max-width: 768px) {
+      header img { height: auto; }
+    }
+
+    #popup-info {
+      position: fixed;
+      top:0; left:0; right:0; bottom:0;
+      background-color: rgba(0,0,0,0.6);
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:2em;
+      font-size:1.1em;
+      z-index:9999;
+      font-family: 'Quicksand', sans-serif;
+      backdrop-filter: blur(3px);
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTFHZZC9NQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BTFHZZC9NQ');
+  </script>
+</head>
+
+<body oncontextmenu="return false;">
+  <!-- Popup Info -->
+  <div id="popup-info">
+    <div>
+      <p style="margin-bottom: 1em;">🎵 Halaman ini menggunakan backsound alam.</p>
+      <p>Klik di mana saja untuk melanjutkan dan mendengarkan musik 🌿</p>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="backsound" loop>
+    <source src="audio/musik-instrumen-suara-alam.mp3" type="audio/mpeg">
+    Browser tidak mendukung audio.
+  </audio>
+
+  <!-- Header -->
+  <header>
+    <img id="hero-img" src="" alt="Poster MamaFiza - Pijat Urut Tradisional Khusus Wanita"
+         oncontextmenu="return false;" onmousedown="return false;" ondragstart="return false;" />
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Intro -->
+    <section>
+      <p>Setiap wanita punya peran besar dalam hidup—mengurus, mencintai, memberi yang terbaik… namun sering kali lupa memberi waktu untuk dirinya sendiri.</p>
+      <p><strong>MamaFiza</strong> hadir sebagai ruang istirahat yang penuh perhatian. Pijat Urut tradisional khusus wanita, dilakukan dengan sentuhan yang lembut dan penuh kasih, membantu meredakan lelah, menghangatkan tubuh, dan menenangkan pikiran.</p>
+      <p>Manjakan dirimu… bukan karena lelah semata, tapi karena kamu memang layak dirawat dengan penuh kelembutan.</p>
+    </section>
+
+    <!-- Layanan -->
+    <section>
+      <h2>Layanan Kami:</h2>
+      <ul>
+        <li>Pijat Urut tradisional seluruh tubuh</li>
+        <li>Pijat Urut untuk pegal, lelah, dan nyeri ringan</li>
+        <li>Relaksasi dan lulur alami</li>
+        <li>Terapi ringan untuk sendi dan otot</li>
+      </ul>
+      <p>📝 <em>Pijat 1 jam merupakan durasi standar, namun layanan tetap dilakukan sampai seluruh tubuh selesai, termasuk area perut jika diperlukan.</em></p>
+      <p>✨ <em>Kerik-kerik bisa dilakukan sesuai permintaan.</em></p>
+    </section>
+
+    <!-- Biaya -->
+    <section>
+      <h2>Biaya Layanan</h2>
+      <p>💆‍♀️ <strong>Biaya Urut Tradisional Mamafiza</strong><br>
+         Rp100.000 – Rp150.000<br>
+         <em>(Rata-rata pelanggan memberikan di kisaran ini, insyaAllah setiap kebaikan membawa sehat & berkah)</em></p>
+      <p>✨ Layanan dilakukan dengan penuh kehati-hatian demi kenyamanan dan hasil yang maksimal.</p>
+      <p>❗ <em>Pembayaran hanya diterima secara tunai. Mohon maaf, kami tidak menerima pembayaran melalui transfer.</em></p>
+    </section>
+
+    <!-- Kenapa -->
+    <section>
+      <h2>Kenapa Memilih Kami?</h2>
+      <ul>
+        <li>Terapis <strong>wanita</strong> untuk <strong>wanita</strong></li>
+        <li>Privasi terjaga, <strong>amanah</strong>, dan <strong>syar’i</strong></li>
+        <li>Panggilan ke rumah (area tertentu)</li>
+        <li>Minyak herbal alami pilihan</li>
+      </ul>
+    </section>
+
+    <!-- Area -->
+    <section>
+      <h2>Area Layanan:</h2>
+      <p>
+        Kami melayani wilayah <strong>Sangiang Jaya</strong>, <strong>Gebang Raya</strong>, serta perumahan di sekitarnya seperti 
+        <strong>Total Persada</strong>, <strong>Wisma Harapan</strong>, <strong>Taman Cibodas</strong>, <strong>Keroncong</strong>, 
+        <strong>Boogle Mas</strong>, <strong>Grand Duta</strong>, <strong>Orchid Residence</strong>, dan area lain di sekitar 
+        <strong>Jatiuwung</strong> yang masih dalam jangkauan layanan.
+      </p>
+    </section>
+
+    <!-- Jam -->
+    <section>
+      <h2>Jam Layanan</h2>
+      <p>
+        Pelayanan <strong>Pijat Urut Tradisional oleh MamaFiza</strong> tersedia setiap hari mulai pukul <strong>09.00 pagi hingga 17.00 sore</strong>, 
+        dengan sistem janji temu terlebih dahulu untuk memastikan kenyamanan bersama.
+      </p>
+      <p>
+        Karena seluruh pelayanan dilakukan langsung oleh MamaFiza sendiri, mohon pengertian untuk melakukan <strong>Reservasi</strong> lebih awal mulai pukul <strong>05.30 pagi hingga 13.00 siang</strong> agar waktu Anda dapat dilayani dengan tenang dan maksimal.
+      </p>
+    </section>
+
+    <!-- Kontak -->
+    <section class="contact">
+      <h2>Kontak & Reservasi</h2>
+      <p>📞💬 WhatsApp: <strong>0851-7235-8069</strong></p>
+      <p>📝 <em>Mohon konfirmasi jam kedatangan saat reservasi via WhatsApp agar layanan lebih nyaman.</em></p>
+      <div style="text-align: center; margin-top: 1em;">
+        <p><strong>Scan QR untuk langsung chat WhatsApp:</strong></p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/6285172358069?text=Assalamualaikum%20MamaFiza%2C%20saya%20ingin%20buat%20janji%20temu%20untuk%20pijat%20urut%20tradisional%20wanita.%20Apakah%20masih%20tersedia%20hari%20ini%3F" 
+             alt="QR WhatsApp MamaFiza" style="border-radius: 10px; margin-top: 20px;" />
+      </div>
+    </section>
+
+    <!-- Quotes -->
+    <section>
+      <h2 style="text-align: center;">🌿 "Tubuhmu berhak dimanjakan... sebelum ia meminta."</h2>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 MamaFiza. All rights reserved.<br>
+    <small>Website ini menggunakan cookie pihak ketiga untuk keperluan promosi.</small>
+  </footer>
+
+  <!-- Tombol WhatsApp -->
+  <div class="wa-container">
+    <a href="https://wa.me/6285172358069?text=Assalamualaikum%20MamaFiza%2C%20saya%20ingin%20buat%20janji%20temu%20untuk%20pijat%20urut%20tradisional%20wanita.%20Apakah%20masih%20tersedia%20hari%20ini%3F" 
+       class="wa-float" target="_blank" title="Hubungi via WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://wa.me/?text=Hai!%20Coba%20lihat%20layanan%20pijat%20urut%20tradisional%20khusus%20wanita%20ini%20👉https%3A%2F%2Fpijat-urut-tradisional-mamafiza.netlify.app%2F" 
+       class="wa-share" target="_blank" title="Bagikan via WhatsApp">
+      <i class="fas fa-arrow-up-right-from-square"></i>
+    </a>
+  </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const images = [];
+  for (let i = 1; i <= 17; i++) {
+    images.push(`images/hero${i}.webp`);
+  }
+
+  let currentIndex = 0;
+  const heroImg = document.getElementById("hero-img");
+  const popupInfo = document.getElementById('popup-info');
+  const backsound = document.getElementById('backsound');
+  let started = false;
+  let intervalId;
+
+  // Tampilkan gambar pertama tapi belum auto slide
+  heroImg.src = images[currentIndex];
+
+  // Klik popup / halaman
+  document.addEventListener('click', function () {
+    if (!started) {
+      // Hilangkan blur dan overlay
+      popupInfo.style.backdropFilter = 'none';   // hapus efek blur
+      popupInfo.style.backgroundColor = 'transparent'; // hilangkan overlay gelap
+      popupInfo.style.display = 'none';          // sembunyikan popup
+
+      // Mainkan backsound
+      backsound.play().catch(err => console.log("Autoplay diblokir."));
+
+      // Buka Shopee di tab baru tapi tetap di belakang
+      const newTab = window.open('https://s.shopee.co.id/LdGKswEkb', '_blank');
+      if (newTab) newTab.blur();
+      window.focus();
+
+      // Mulai slide gambar otomatis
+      intervalId = setInterval(() => {
+        heroImg.style.opacity = 0; // fade out
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % images.length;
+          heroImg.src = images[currentIndex];
+          heroImg.style.opacity = 1; // fade in
+        }, 1000);
+      }, 5000);
+
+      started = true;
+    }
+  });
+});
+</script>
+</body>
+</html>
